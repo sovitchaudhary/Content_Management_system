@@ -12,12 +12,12 @@
     <div class="col l9 m9 s12">
         <div class="col l3 m4 s6">
                 <div class="card">
-                    <div class="card-image">
+                    <div class="card-image" >
                         <img src="assets/images/pk.jpg">
-                        <span class="card-title ">POKHARA</span>
+                        <span class="card-title">POKHARA</span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little.I am convenient because I require little.</p>
                     </div>
                     <div class="card-action blue-grey lighten-4 center">
                         <a href="#">Read More</a>
@@ -43,10 +43,9 @@
                     <div class="card-image">
                         <img src="assets/images/mk.jpg">
                         <span class="card-title">MANAKAMANA</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        <p>I am a very simple card. I am good at containing small bits of information markup to use effectively.</p>
                     </div>
                     <div class="card-action blue-grey lighten-4 center">
                         <a href="#">Read More</a>
@@ -58,10 +57,9 @@
                     <div class="card-image">
                         <img src="assets/images/2.jpg">
                         <span class="card-title ">KARNALI BRIDGE</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little.</p>
                     </div>
                     <div class="card-action blue-grey lighten-4 center">
                         <a href="#">Read More</a>
@@ -72,9 +70,8 @@
             <div class="col l3 m4 s6">
                 <div class="card">
                     <div class="card-image">
-                        <img src="assets/images/dd.jpeg">
+                        <img src="assets/images/dd.jpg">
                         <span class="card-title ">DODHARA CHADANI</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                     </div>
                     <div class="card-content">
                         <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
