@@ -3,9 +3,9 @@
         Developed by,Er. SOVIT
         <span class="right">
             Follow Us on
-            <a href="" class="btn btn-floating"><i class="fa fa-facebook-official white-text" aria-hidden="true"></i></a>
-            <a href="" class="btn btn-floating"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-            <a href="" class="btn btn-floating"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="" class="btn btn-floating"><i class="fa fa-facebook-square blue lighten-4-text" aria-hidden="true"></i></a>
+            <a href="" class="btn btn-floating"><i class="fa fa-twitter-square blue lighten-4-text" aria-hidden="true"></i></a>
+            <a href="" class="btn btn-floating"><i class="fa fa-instagram red lighten-4-text" aria-hidden="true"></i></a>
             <a href="" class="btn btn-floating"><i class="fa fa-youtube-play red-text" aria-hidden="true"></i></a>
         </span>
     </div>
