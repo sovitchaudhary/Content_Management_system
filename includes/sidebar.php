@@ -28,5 +28,21 @@
             <a href="" class="collection-item grey lighten-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
             </a>
+            <div class="divider"></div>
+            <a href="" class="collection-item grey lighten-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
+            </a>
+            <div class="divider"></div>
+            <a href="" class="collection-item grey lighten-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
+            </a>
+            <div class="divider"></div>
+            <a href="" class="collection-item grey lighten-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
+            </a>
+            <div class="divider"></div>
+            <a href="" class="collection-item grey lighten-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
+            </a>
         </div>
     </div>
