@@ -17,17 +17,17 @@ if (isset($_POST['signup'])) {
     $res1 = mysqli_query($conn, $sql1);
     if (mysqli_num_rows($res1) > 0) {
         header("Location: login.php");
-        $_SESSION['message'] = "Account Already Exists, Please Login To Continue";
+        $_SESSION['message'] = "<div class='chip red black-text'>Account Already Exists, Please Login To Continue</div>";
     } else {
         $sql = "insert into users(email,username,password) values('$email','$username','$password')";
 
         $res = mysqli_query($conn, $sql);
         if ($res) {
             header("Location: login.php");
-            $_SESSION['message'] = "You are successfully registered.";
+            $_SESSION['message'] = "<div class='chip green white-text'>You are successfully registered, Login To Continue</div>";
         } else {
             header("Location: login.php");
-            $_SESSION['message'] = "Sorry Something Went Wrong, Please Signup Again.";
+            $_SESSION['message'] = "<div class='chip red black-text'>Sorry Something Went Wrong, Please Signup Again.</div>";
         }
     }
 
