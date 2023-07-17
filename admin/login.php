@@ -29,12 +29,7 @@
                 ?>
                 <form action="login_check.php" method="POST">
                     <div class="input-field">
-                        <input type="email" name="email" id="email" placeholder="Enter Email" class="validate">
-                        <div class="error-message" id="email-error" style="display: none; color: red;">Invalid Email
-                            Format
-                        </div>
-                        <div class="success-message" id="email-success" style="display: none; color: green;">Valid Email
-                        </div>
+                        <input type="text" name="username" id="username" placeholder="Enter username" class="validate">
                     </div>
                     <div class="input-field">
                         <input type="password" name="password" placeholder="password">
