@@ -29,10 +29,10 @@
                 ?>
                 <form action="login_check.php" method="POST">
                     <div class="input-field">
-                        <input type="text" name="username" id="username" placeholder="Enter username" class="validate">
+                        <input type="text" name="username" id="username" placeholder="Enter username" class="validate " required >
                     </div>
                     <div class="input-field">
-                        <input type="password" name="password" placeholder="password">
+                        <input type="password" name="password" placeholder="password" required >
                     </div>
                     <input type="submit" name="login" class="btn" value="LOGIN">
                 </form>
@@ -45,7 +45,7 @@
                 <h4>Signup Now</h4>
                 <form action="signup.php" method="POST">
                     <div class="input-field">
-                        <input type="email" name="email" id="email" placeholder="Enter Email" class="validate">
+                        <input type="email" name="email" id="email" placeholder="Enter Email" class="validate" required >
                         <div class="error-message" id="email-error" style="display: none; color: red;">Invalid Email
                             Format
                         </div>
@@ -54,10 +54,10 @@
                     </div>
 
                     <div class="input-field">
-                        <input type="text" name="username" placeholder="Username">
+                        <input type="text" name="username" placeholder="Username" required >
                     </div>
                     <div class="input-field">
-                        <input type="password" name="password" placeholder="password">
+                        <input type="password" name="password" placeholder="password" required >
                     </div>
                     <input type="submit" name="signup" class="btn" value="Sign Up">
                 </form>
