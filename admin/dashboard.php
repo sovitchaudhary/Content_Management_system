@@ -120,7 +120,7 @@ include "includes/navbar.php";
     </div>
 
     <div class="fixed-action-btn">
-        <a href="write_blog.php" class="btn-floating btn btn-large white-text pulse">
+        <a href="write.php" class="btn-floating btn btn-large white-text pulse">
             <i class="material-icons">edit</i>
         </a>
     </div>
