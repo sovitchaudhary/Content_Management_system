@@ -3,7 +3,7 @@ include "includes/navbar.php";
 ?>
 
 <div class="main">
-    <form action="write_check.php" method="POST">
+    <form action="write_check.php" method="POST" enctype="multipart/form-data">
         <div class="card-panel">
             <?php
             if (isset($_SESSION['message'])) {

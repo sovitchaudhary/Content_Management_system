@@ -36,7 +36,7 @@ include "header.php";
             <a href="dashboard.php"><i class="fa fa-home blue-text" style="font-size:20px;"></i>Dashboard</a>
         </li>
         <li>
-            <a href=""><i class="fa fa-pencil-square-o black-text" style="font-size:18px;"></i>Posts</a>
+            <a href="post.php"><i class="fa fa-pencil-square-o black-text" style="font-size:18px;"></i>Posts</a>
         </li>
         <li>
             <a href=""><i class="fa fa-file-image-o green-text" style="font-size:18px;"></i>Images</a>
