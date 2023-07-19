@@ -14,6 +14,7 @@ if (isset($_POST['login'])) {
     $row = mysqli_fetch_assoc($res);
     $pass = $row['password'];
     if(password_verify($password,$pass)){
+        $_SESSION['username'] = $username;
         header("Location: dashboard.php");
     } else {
         header("Location: login.php");

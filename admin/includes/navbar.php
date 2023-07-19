@@ -1,3 +1,6 @@
+<?php
+include "header.php";
+?>
 <body>
     <nav class="blue-grey">
         <div class="nav-wrapper">
@@ -17,12 +20,20 @@
                     <img src="../assets/images/ubg.jpg" alt="" class="responsive-img">
                 </div>
                 <a href=""> <img src="../assets/images/user.jpeg" alt="" class="circle"> </a>
-                <span class="name white-text">Sovit</span>
-                <span class="email white-text">sovit@gmail.com</span>
+                <span class="name white-text"> <?php echo $_SESSION['username']; ?> </span>
+                <span class="email white-text">
+                    <?php
+                        $user = $_SESSION['username'];
+                        $sql = "select email from users where username='$user'"; 
+                        $res = mysqli_query($conn,$sql);
+                        $row = mysqli_fetch_assoc($res);
+                        echo $row['email'];
+                    ?>
+                </span>
             </div>
         </li>
         <li>
-            <a href=""><i class="fa fa-home blue-text" style="font-size:20px;"></i>Dashboard</a>
+            <a href="dashboard.php"><i class="fa fa-home blue-text" style="font-size:20px;"></i>Dashboard</a>
         </li>
         <li>
             <a href=""><i class="fa fa-pencil-square-o black-text" style="font-size:18px;"></i>Posts</a>
