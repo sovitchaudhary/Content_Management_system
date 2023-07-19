@@ -2,7 +2,7 @@
 include "includes/navbar.php";
 
 if (isset($_SESSION['username'])) {
-    
+
     ?>
 
     <!-- Main content -->
@@ -103,11 +103,9 @@ if (isset($_SESSION['username'])) {
         </a>
     </div>
 
-    <?php
-    include "includes/footer.php";
-    ?>
 
-    <?php
+<?php
+include "includes/footer.php";
 } else {
     $_SESSION['message'] = "<div class='chip red black-text'> Login To Continue</div>";
     header("Location: login.php");
