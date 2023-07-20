@@ -19,11 +19,11 @@ include "includes/navbar.php";
                     <div class="card small">
                         <div class="card-image">
                             <img src="assets/images/<?php echo $row['feature_img'] ?>">
-                            <span class="card-title pink-text truncate">
+                            <span class="card-title purple-text truncate">
                                 <?php echo $row['title']; ?>
                             </span>
                         </div>
-                        <div class="card-content" style="height: 150px; overflow: hidden;">
+                        <div class="card-content truncate" style="height: 150px; overflow: hidden;">
                             <?php echo $row['content']; ?>
                         </div>
                         <div class="card-action blue-grey lighten-4 center">
