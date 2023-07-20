@@ -16,6 +16,16 @@ if (isset($_SESSION['username'])) {
                 ?>
                 <h5>Title</h5>
                 <textarea name="title" class="materialize-textarea" placeholder="Title"></textarea>
+                <h5>Upload Image</h5>
+                <div class="input-field file-field">
+                    <div class="btn">
+                        Upload file
+                        <input type="file" name="image">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input type="text" class="file-path">
+                    </div>
+                </div>
                 <h5>Content</h5>
                 <textarea name="ckeditor" id="ckeditor" class="ckeditor"></textarea>
                 <div class="center">
