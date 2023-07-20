@@ -8,7 +8,6 @@ if (isset($_POST['publish'])) {
 
     $data = $_POST['ckeditor'];
     $data = mysqli_real_escape_string($conn, $data);
-    $data = htmlentities($data);
 
     $image = $_FILES['image'];
     $img_name = $_FILES['image']['name'];

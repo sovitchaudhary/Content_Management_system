@@ -1,4 +1,4 @@
- <footer class="page-footer blue-grey ">
+ <footer class="page-footer black white-text ">
     <div class="container">
         Developed by,Er. SOVIT
         <span class="right">
