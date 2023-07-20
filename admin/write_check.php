@@ -10,10 +10,6 @@ if (isset($_POST['publish'])) {
     $data = mysqli_real_escape_string($conn, $data);
     $data = htmlentities($data);
 
-    // $author = $_POST['author'];
-    // $author = mysqli_real_escape_string($conn, $author);
-    // $author = htmlentities($author);
-
     $image = $_FILES['image'];
     $img_name = $_FILES['image']['name'];
     $img_size = $_FILES['image']['size'];
@@ -22,30 +18,35 @@ if (isset($_POST['publish'])) {
 
     if ($type == "image/jpeg" || $type == "image/png" || $type == "image/jpg") {
         if ($img_size <= 2097152) {
-
-            move_uploaded_file($tmp_dir,"../assets/images/".$img_name);
-
-            $sql = "INSERT INTO `posts`(`title`, `content`,`feature_img`) VALUES ('$title','$data','$img_name')";
-
-            $res = mysqli_query($conn, $sql);
-
-            if ($res) {
-                header("Location: write.php");
-                $_SESSION['message'] = "<div class='chip green white-text'> Post in Published </div>";
+    
+            $destination = "../assets/images/" . $img_name;
+    
+            if (move_uploaded_file($img_dir, $destination)) {
+                // File moved successfully, proceed with the database insertion
+                $sql = "INSERT INTO `posts`(`title`, `content`,`feature_img`) VALUES ('$title','$data','$img_name')";
+    
+                $res = mysqli_query($conn, $sql);
+    
+                if ($res) {
+                    header("Location: write.php");
+                    $_SESSION['message'] = "<div class='chip green white-text'> Post is Published </div>";
+                } else {
+                    header("Location: write.php");
+                    $_SESSION['message'] = "<div class='chip red black-text'> Sorry, Something went wrong. </div>";
+                }
             } else {
                 header("Location: write.php");
-                $_SESSION['message'] = "<div class='chip red black-text'> Sorry, Something went wrong. </div>";
+                $_SESSION['message'] = "<div class='chip red black-text'> Sorry, File could not be moved. </div>";
             }
-        }
-        else {
+        } else {
             header("Location: write.php");
-            $_SESSION['message'] = "<div class='chip red black-text'> Sorry, Image size exceded 2mb.</div>";  
+            $_SESSION['message'] = "<div class='chip red black-text'> Sorry, Image size exceeded 2mb.</div>";  
         }
-    }
-    else {
+    } else {
         header("Location: write.php");
-                $_SESSION['message'] = "<div class='chip red black-text'> Sorry, Image format is not Supported. </div>";
+        $_SESSION['message'] = "<div class='chip red black-text'> Sorry, Image format is not supported. </div>";
     }
+    
 }
 
 ?>
