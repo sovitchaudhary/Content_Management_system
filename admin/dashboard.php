@@ -35,6 +35,9 @@ if (isset($_SESSION['username'])) {
                         </li>
                         <?php
                     }
+                } else {
+
+                    echo "<div class='chip red white-text'> You have No Posts yet, Click down bellow circular button</div>";
                 }
                 ?>
             </ul>

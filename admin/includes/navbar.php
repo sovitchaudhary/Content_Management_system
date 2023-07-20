@@ -5,7 +5,7 @@ include "header.php";
     <nav class="blue-grey">
         <div class="nav-wrapper">
             <div class="container">
-                <a href="#" class="brand-logo center">Aristo</a>
+                <a href="dashboard.php" class="brand-logo center">Aristo</a>
                 <a href="#" data-target="sidenav" class="sidenav-trigger" data-activates="sidenav">
                     <i class="material-icons">menu</i>
                 </a>
