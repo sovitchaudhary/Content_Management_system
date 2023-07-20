@@ -37,6 +37,11 @@ include "includes/navbar.php";
         </div>
     </div>
 </div>
+<div class="fixed-action-btn">
+    <a href="write.php" class="btn-floating btn btn-large white-text pulse">
+        <i class="material-icons">edit</i>
+    </a>
+</div>
 <script>
     const del = document.querySelectorAll(".delete");
     del.forEach(function (item, index) {
@@ -58,5 +63,5 @@ include "includes/navbar.php";
     }
 </script>
 <?php
-    include "includes/footer.php";
+include "includes/footer.php";
 ?>
