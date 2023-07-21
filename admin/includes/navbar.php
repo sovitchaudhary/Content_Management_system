@@ -49,7 +49,7 @@ if (isset($_SESSION['username'])) {
                 <a href=""><i class="fa fa-comments-o blue-text" style="font-size:18px;"></i>Comments</a>
             </li>
             <li>
-                <a href=""><i class="fa fa-cog black-text" style="font-size:18px;"></i> Setting</a>
+                <a href="setting.php"><i class="fa fa-cog black-text" style="font-size:18px;"></i> Setting</a>
             </li>
             <div class="divider">
 
