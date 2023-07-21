@@ -1,3 +1,6 @@
+<?php
+  include "header.php";  
+?>
 <ul class="collection">
     <li class="collection-item">
         <h5>Search</h5>
@@ -16,36 +19,18 @@
 
 <div class="collection with-header">
     <h5 style="padding-left: 20px;">Trending Blogs</h5>
-    <a href="" class="collection-item grey lighten-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
+    <?php
+    $sql = "SELECT * FROM posts ORDER BY view DESC LIMIT 5";
+    $res = mysqli_query($conn,$sql);
+    if(mysqli_num_rows($res)>0){
+       while ($row = mysqli_fetch_assoc($res)) {
+        ?>
+        <a href="post.php?id=<?php echo $row['id']; ?>" class="collection-item grey lighten-3">
+        <?php echo $row['title']; ?>
     </a>
-    <div class="divider"></div>
-    <a href="" class="collection-item grey lighten-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
-    </a>
-    <div class="divider"></div>
-    <a href="" class="collection-item grey lighten-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
-    </a>
-    <div class="divider"></div>
-    <a href="" class="collection-item grey lighten-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
-    </a>
-    <div class="divider"></div>
-    <a href="" class="collection-item grey lighten-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
-    </a>
-    <div class="divider"></div>
-    <a href="" class="collection-item grey lighten-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
-    </a>
-    <div class="divider"></div>
-    <a href="" class="collection-item grey lighten-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
-    </a>
-    <div class="divider"></div>
-    <a href="" class="collection-item grey lighten-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum minima at voluptate cupiditate.
-    </a>
+        <?php
+       } 
+    }
+    ?>
 </div>
 </div>

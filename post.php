@@ -19,6 +19,14 @@ include "includes/navbar.php";
             $sql = "select * from posts where id=$id";
             $res = mysqli_query($conn, $sql);
             if (mysqli_num_rows($res) > 0) {
+                $sql2 = "SELECT view FROM posts WHERE id=$id";
+                $res2 = mysqli_query($conn,$sql2);
+                $row2 = mysqli_fetch_assoc($res2);
+                $views = $row2['view'];
+                $views = $views+1;
+                $sql3 = "UPDATE posts SET view=$views WHERE id=$id";
+                mysqli_query($conn,$sql3);
+
                 $row = mysqli_fetch_assoc($res);
                 $title = $row['title'];
                 $content = $row['content'];
