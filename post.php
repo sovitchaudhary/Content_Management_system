@@ -20,12 +20,12 @@ include "includes/navbar.php";
             $res = mysqli_query($conn, $sql);
             if (mysqli_num_rows($res) > 0) {
                 $sql2 = "SELECT view FROM posts WHERE id=$id";
-                $res2 = mysqli_query($conn,$sql2);
+                $res2 = mysqli_query($conn, $sql2);
                 $row2 = mysqli_fetch_assoc($res2);
                 $views = $row2['view'];
-                $views = $views+1;
+                $views = $views + 1;
                 $sql3 = "UPDATE posts SET view=$views WHERE id=$id";
-                mysqli_query($conn,$sql3);
+                mysqli_query($conn, $sql3);
 
                 $row = mysqli_fetch_assoc($res);
                 $title = $row['title'];
@@ -39,6 +39,62 @@ include "includes/navbar.php";
                     <p class="flow-text">
                         <?php echo ucfirst($content); ?>
                     </p>
+
+                    <!-- comments area -->
+                    <div class="card-panel">
+                        <div class="row">
+                            <div class="col l8 offset-12 m10 offset-m1 s12">
+                                <h5>Write Comment</h5>
+                                <?php
+                                if (isset($_SESSION['message'])) {
+                                    echo $_SESSION['message'];
+                                    unset($_SESSION['message']);
+                                }
+                                ?>
+                                <form action="post.php?id=<?php echo $id; ?>" method="POST">
+                                    <div class="input-field">
+                                        <input type="email" name="email" id="email" placeholder="Enter Email" class="validate"
+                                            required>
+                                        <div class="error-message" id="email-error" style="display: none; color: red;">Invalid
+                                            Email Format
+                                        </div>
+                                        <div class="success-message" id="email-success" style="display: none; color: green;">
+                                            Valid Email
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <textarea name="comment" id="" cols="30" rows="10" class="materialize-textarea"
+                                            placeholder="Your comment type here ..."></textarea>
+                                    </div>
+                                    <div class="center">
+                                        <input type="submit" value="comment" name="submit" class="btn">
+                                    </div>
+                                </form>
+                                <h5>Comments</h5>
+                                <ul class="collection">
+                                    <?php
+                                    $sql5 = "SELECT * FROM comments WHERE post_id=$id AND status=1 ORDER BY id DESC";
+                                    $res5 = mysqli_query($conn, $sql5);
+                                    if (mysqli_num_rows($res5) > 0) {
+                                        while ($row = mysqli_fetch_assoc($res5)) {
+                                            ?>
+                                            <li class="collection-item">
+                                                <?php echo $row['comment_text']; ?>
+                                                <span class="secondary-content">
+                                                <?php echo $row['email']; ?>
+                                                </span>
+                                            </li>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <h5>Related Blogs</h5>
                     <div class="row">
                         <?php
@@ -92,4 +148,27 @@ include "includes/navbar.php";
 
 <?php
 include "includes/footer.php";
+?>
+<?php
+if (isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $comment = $_POST['comment'];
+    $id = $_GET['id'];
+    $email = mysqli_real_escape_string($conn, $email);
+    $email = htmlentities($email);
+    $comment = mysqli_real_escape_string($conn, $comment);
+    $comment = htmlentities($comment);
+    $id = mysqli_real_escape_string($conn, $id);
+    $id = htmlentities($id);
+
+    $sql4 = "INSERT INTO comments (email,post_id,comment_text) VALUES('$email',$id,'$comment')";
+    $res4 = mysqli_query($conn, $sql4);
+    if ($res4) {
+        header("Location: post.php?id=$id");
+        $_SESSION['message'] = "<div class='chip green white-text'> Comment Added Successfully</div>";
+    } else {
+        header("Location: post.php?id=$id");
+        $_SESSION['message'] = "<div class='chip red black-text'> Sorry, Something went wrong.</div>";
+    }
+}
 ?>
