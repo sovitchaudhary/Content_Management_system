@@ -1,6 +1,3 @@
-<?php
-  include "header.php";  
-?>
 <ul class="collection">
     <li class="collection-item">
         <h5>Search</h5>
