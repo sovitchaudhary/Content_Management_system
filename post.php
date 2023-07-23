@@ -43,7 +43,7 @@ include "includes/navbar.php";
                     <!-- comments area -->
                     <div class="card-panel">
                         <div class="row">
-                            <div class="col l8 offset-12 m10 offset-m1 s12">
+                            <div class="col l6 offset-l3 m8 offset-m2 s12">
                                 <h5>Write Comment</h5>
                                 <?php
                                 if (isset($_SESSION['message'])) {
@@ -81,7 +81,7 @@ include "includes/navbar.php";
                                             <li class="collection-item">
                                                 <?php echo $row['comment_text']; ?>
                                                 <span class="secondary-content">
-                                                <?php echo $row['email']; ?>
+                                                    <?php echo $row['email']; ?>
                                                 </span>
                                             </li>
                                             <?php
@@ -107,9 +107,12 @@ include "includes/navbar.php";
                                 <div class="col l3 m4 s6">
                                     <div class="card small">
                                         <div class="card-image">
-                                            <img src="assets/images/<?php echo $row['feature_img'] ?>">
-                                            <span class="card-title pink-text truncate">
-                                                <?php echo $row['title']; ?>
+                                            <img src="assets/images/<?php echo $row['feature_img'] ?>"
+                                                style="height: 150px; overflow: hidden;">
+                                        </div>
+                                        <div>
+                                            <span class="card-title blue-text truncate">
+                                                <?php echo ucfirst($row['title']); ?>
                                             </span>
                                         </div>
                                         <div class="card-content" style="height: 150px; overflow: hidden;">

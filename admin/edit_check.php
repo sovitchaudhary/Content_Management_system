@@ -12,7 +12,6 @@ if (isset($_POST['update'])) {
 
     $data = $_POST['ckeditor'];
     $data = mysqli_real_escape_string($conn, $data);
-    $data = htmlentities($data);
 
     // $author = $_POST['author'];
     // $author = mysqli_real_escape_string($conn, $author);
