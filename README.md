@@ -5,19 +5,19 @@ without the need for technical knowledge.
 
 Features
 --------
-[] Multiple user register/Login
+- [] Multiple user register/Login
 
-[] Admin Panel
+- [] Admin Panel
 
-[] Responsive
+- [] Responsive
 
-[] Write/Delete Post (upload image)
+- [] Write/Delete Post (upload image)
 
-[] Write/Delete Comment
+- [] Write/Delete Comment
 
-[] Trending Blogs
+- [] Show Trending Blogs
 
-[] Search Blog
+- [] Search Blog
 
 Uses
 ----
