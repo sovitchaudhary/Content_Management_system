@@ -5,28 +5,28 @@ without the need for technical knowledge.
 
 Features
 --------
-- [] Multiple user register/Login
+ Multiple user register/Login
 
-- [] Admin Panel
+- Admin Panel
 
-- [] Responsive
+- Responsive
 
-- [] Write/Delete Post (upload image)
+- Write/Delete Post (upload image)
 
-- [] Write/Delete Comment
+- Write/Delete Comment
 
-- [] Show Trending Blogs
+- Show Trending Blogs
 
-- [] Search Blog
+- Search Blog
 
 Uses
 ----
-Front-end : HTML, CSS, Materialize, JavaScript
+- [ ] Front-end : HTML, CSS, Materialize, JavaScript
 
-IDE : Visual Studio Code (vscode)
+- [ ] IDE : Visual Studio Code (vscode)
 
-Server : Xampp
+- [ ] Server : Xampp
 
-Back-end : PHP
+- [ ] Back-end : PHP
 
-Databse : MySQLi
+- [ ] Databse : MySQLi
